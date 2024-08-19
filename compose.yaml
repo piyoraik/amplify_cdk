@@ -1,0 +1,11 @@
+services:
+  nodejs:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/workspaces
+    env_file:
+      - .env
+    tty: true
+    platform: linux/x86_64
